@@ -1,2 +1,0 @@
-# BELLAM
-BellamSolutions
