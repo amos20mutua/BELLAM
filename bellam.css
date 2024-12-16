@@ -1,10 +1,11 @@
 /* General Styles */
+/* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(135deg, #1a1f36, #252b48);
+    background: linear-gradient(135deg, #76ABAE, #252b48);
     color: #ffffff;
 }
 
@@ -30,8 +31,6 @@ header {
   height: 100vh; /* Full-screen height */
 }
 
-
-/* Media Query for Smaller Screens */
 @media (max-width: 768px) {
   .hero {
     background-size: cover; /* Ensures the image still covers the area */
@@ -40,8 +39,7 @@ header {
   }
 }
 
-
-
+/* Overlay */
 .hero .overlay {
     position: absolute;
     top: 0;
@@ -104,7 +102,7 @@ header {
     border: 1px solid #dee2e6;
     border-radius: 5px;
     transition: transform 0.3s ease;
-    background-color: #2a2f44;
+    background-color: #31363F; /* Changed to new color */
 }
 
 .product-card .info {
