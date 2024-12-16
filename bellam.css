@@ -23,11 +23,21 @@ header {
 
 /* Hero Section Styles */
 .hero {
-    position: relative;
-    height: 100vh;
-    background: url('https://noorlife.ae/images/4.jpeg') no-repeat center center/cover;
-    background-blend-mode: overlay;
+  background-image: url('your-image.jpg'); /* Replace with your image URL */
+  background-size: cover; /* Ensures the image covers the entire hero section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 100vh; /* Makes the hero section take the full viewport height */
 }
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .hero {
+    background-size: contain; /* Adjusts to fit the screen */
+    height: 50vh; /* Adjust height if necessary for smaller screens */
+  }
+}
+
 
 .hero .overlay {
     position: absolute;
