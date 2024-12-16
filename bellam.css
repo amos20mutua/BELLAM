@@ -23,15 +23,13 @@ header {
 
 /* Hero Section Styles */
 .hero {
-  background-image: url('hero.jpg'); /* Replace with your actual image URL */
-  background-size: cover; /* Ensures the image fills the hero section */
-  background-position: center; /* Keeps the image centered */
+  background-image: url('path-to-image.jpg');
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents tiling */
-  height: 100vh; /* Full screen height */
-  display: flex; /* Optional: Helps align content */
-  align-items: center; /* Vertically centers content */
-  justify-content: center; /* Horizontally centers content */
+  height: 100vh; /* Full-screen height */
 }
+
 
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
