@@ -23,20 +23,25 @@ header {
 
 /* Hero Section Styles */
 .hero {
-  background-image: url('noor water.jpeg'); /* Replace with your image URL */
-  background-size: cover; /* Ensures the image covers the entire hero section */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  height: 100vh; /* Makes the hero section take the full viewport height */
+  background-image: url('your-image.jpg'); /* Replace with your actual image URL */
+  background-size: cover; /* Ensures the image fills the hero section */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents tiling */
+  height: 100vh; /* Full screen height */
+  display: flex; /* Optional: Helps align content */
+  align-items: center; /* Vertically centers content */
+  justify-content: center; /* Horizontally centers content */
 }
 
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
   .hero {
-    background-size: contain; /* Adjusts to fit the screen */
-    height: 50vh; /* Adjust height if necessary for smaller screens */
+    background-size: cover; /* Ensures the image still covers the area */
+    background-position: top center; /* Adjust position for better visibility */
+    height: 70vh; /* Adjust height for smaller screens */
   }
 }
+
 
 
 .hero .overlay {
