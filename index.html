@@ -24,57 +24,94 @@
                     <span class="logo-text-water">Water</span>
                 </div>
             </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#process">Purification</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="cart-wrapper">
-                    <a href="#" class="cart-icon" id="cart-toggle">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span id="cart-count">0</span>
-                    </a>
-                    <!-- Cart Dropdown -->
-                    <div class="cart-dropdown" id="cart-dropdown">
-                        <div class="cart-header">
-                            <h3>Shopping Cart</h3>
-                            <button class="close-cart" id="close-cart">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </div>
-                        <div class="cart-items" id="cart-items">
-                            <!-- Cart items will be dynamically added here -->
-                        </div>
-                        <div class="cart-footer">
-                            <div class="cart-total">
-                                <span>Total:</span>
-                                <span id="cart-total">Ksh 0</span>
-                            </div>
-                            <a href="#" class="checkout-btn" id="whatsapp-checkout">
-                                <i class="fab fa-whatsapp"></i>
-                                Checkout via WhatsApp
-                            </a>
-                        </div>
+            
+            <!-- Cart moved outside nav-links -->
+            <div class="cart-wrapper">
+                <a href="#" class="cart-icon" id="cart-toggle">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </a>
+                <div class="cart-dropdown" id="cart-dropdown">
+                    <div class="cart-header">
+                        <h3>Your Cart</h3>
+                        <button id="close-cart" class="close-cart"><i class="fas fa-times"></i></button>
                     </div>
-                </li>
-            </ul>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
+
+                    <div class="cart-items" id="cart-items">
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+
+                    <div class="cart-footer">
+                        <div class="cart-total">
+                            <span>Total:</span>
+                            <span id="cart-total">Ksh 0</span>
+                        </div>
+
+                        <div class="checkout-form">
+                            <div class="form-group">
+                                <input type="text" id="customer-name" placeholder="Your Name" class="checkout-input">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="customer-phone" placeholder="Phone Number" class="checkout-input">
+                            </div>
+                            <div class="form-group">
+                                <select id="delivery-location" class="checkout-input">
+                                    <option value="">Select Delivery Location</option>
+                                    <option value="Nairobi CBD">Nairobi CBD</option>
+                                    <option value="Westlands">Westlands</option>
+                                    <option value="Kilimani">Kilimani</option>
+                                    <option value="Karen">Karen</option>
+                                    <option value="Langata">Langata</option>
+                                    <option value="Eastlands">Eastlands</option>
+                                    <option value="Pickup">Pickup from Store (Next to Junction Mall)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="delivery-notes" placeholder="Delivery Notes (Optional)" class="checkout-input"></textarea>
+                            </div>
+                        </div>
+
+                        <a href="#" class="checkout-btn" id="whatsapp-checkout">
+                            <i class="fab fa-whatsapp"></i>
+                            Complete Order via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#process">Purification</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
     
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Pure Hydration for a Better Life</h1>
-            <p class="hero-subtitle">Experience the difference with our premium purified water</p>
-            <div class="hero-buttons">
-                <a href="#products" class="btn btn-primary">Shop Now</a>
-                <a href="#process" class="btn btn-secondary">Learn More</a>
+            <div class="hero-text">
+                <h1>Pure Goodness</h1>
+                <h2>in Every Drop</h2>
+                <p class="hero-subtitle">
+                    Experience the difference with our premium purified water
+                    <span class="water-drop-container">
+                        <div class="water-ripple"></div>
+                        <div class="water-drop"></div>
+                    </span>
+                </p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">Shop Now</a>
+                    <a href="#process" class="btn btn-secondary">Learn More</a>
+                </div>
             </div>
         </div>
     </section>
@@ -85,25 +122,31 @@
             <p class="section-subtitle">Choose the perfect size for your hydration needs</p>
         </div>
         <div class="product-grid">
-            <!-- Product Card 1 -->
+            <!-- Product Card 1 - 500ml Bale -->
             <div class="product-card">
                 <div class="product-badge">Best Seller</div>
                 <div class="product-image">
                     <img src="500ml.jpg" alt="Bellam Water 500ml">
                     <div class="product-overlay">
                         <div class="overlay-content">
-                            <button class="quick-view-btn">
-                                <i class="fas fa-eye"></i>
-                                Quick View
-                            </button>
+                            <p>24 bottles per bale</p>
                         </div>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3>Premium 500ml</h3>
-                    <p class="product-description">Perfect for on-the-go hydration</p>
+                    <h3>Premium 500ml Bale</h3>
+                    <p class="product-description">24 bottles per bale</p>
                     <div class="product-price">
-                        <span class="price">Ksh 50</span>
+                        <span class="price">Ksh 600</span>
+                    </div>
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <input type="number" class="qty-input" value="1" min="1" max="99">
+                        <button class="qty-btn plus">
+                            <i class="fas fa-plus"></i>
+                        </button>
                     </div>
                     <button class="add-to-cart-btn">
                         <i class="fas fa-cart-plus"></i>
@@ -112,25 +155,31 @@
                 </div>
             </div>
 
-            <!-- Product Card 2 -->
+            <!-- Product Card 2 - 1L Bale -->
             <div class="product-card">
                 <div class="product-badge popular">Popular</div>
                 <div class="product-image">
                     <img src="1litre.jpg" alt="Bellam Water 1L">
                     <div class="product-overlay">
                         <div class="overlay-content">
-                            <button class="quick-view-btn">
-                                <i class="fas fa-eye"></i>
-                                Quick View
-                            </button>
+                            <p>12 bottles per bale</p>
                         </div>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3>Premium 1 Liter</h3>
-                    <p class="product-description">Ideal for daily consumption</p>
+                    <h3>Premium 1 Liter Bale</h3>
+                    <p class="product-description">12 bottles per bale</p>
                     <div class="product-price">
-                        <span class="price">Ksh 80</span>
+                        <span class="price">Ksh 480</span>
+                    </div>
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <input type="number" class="qty-input" value="1" min="1" max="99">
+                        <button class="qty-btn plus">
+                            <i class="fas fa-plus"></i>
+                        </button>
                     </div>
                     <button class="add-to-cart-btn">
                         <i class="fas fa-cart-plus"></i>
@@ -139,25 +188,31 @@
                 </div>
             </div>
 
-            <!-- Product Card 3 -->
+            <!-- Product Card 3 - 5L Bottle -->
             <div class="product-card">
                 <div class="product-badge family">Family Size</div>
                 <div class="product-image">
                     <img src="10litre.jpg" alt="Bellam Water 10L">
                     <div class="product-overlay">
                         <div class="overlay-content">
-                            <button class="quick-view-btn">
-                                <i class="fas fa-eye"></i>
-                                Quick View
-                            </button>
+                            <p>Single 10L bottle</p>
                         </div>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3>Premium 10 Liter</h3>
-                    <p class="product-description">Perfect for home and office</p>
+                    <h3>Premium 10 Liter Bottle</h3>
+                    <p class="product-description">Single bottle</p>
                     <div class="product-price">
-                        <span class="price">Ksh 250</span>
+                        <span class="price">Ksh 200</span>
+                    </div>
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <input type="number" class="qty-input" value="1" min="1" max="99">
+                        <button class="qty-btn plus">
+                            <i class="fas fa-plus"></i>
+                        </button>
                     </div>
                     <button class="add-to-cart-btn">
                         <i class="fas fa-cart-plus"></i>
@@ -166,25 +221,31 @@
                 </div>
             </div>
 
-            <!-- Product Card 4 -->
+            <!-- Product Card 4 - 18.9L Bottle -->
             <div class="product-card">
-                <div class="product-badge bulk">Bulk Order</div>
+                <div class="product-badge bulk">Bulk Size</div>
                 <div class="product-image">
                     <img src="20litre.jpg" alt="Bellam Water 18.9L">
                     <div class="product-overlay">
                         <div class="overlay-content">
-                            <button class="quick-view-btn">
-                                <i class="fas fa-eye"></i>
-                                Quick View
-                            </button>
+                            <p>Single 18.9L bottle</p>
                         </div>
                     </div>
                 </div>
                 <div class="product-info">
-                    <h3>Premium 18.9 Liter</h3>
-                    <p class="product-description">Industrial and office solution</p>
+                    <h3>Premium 18.9 Liter Bottle</h3>
+                    <p class="product-description">Single bottle - Perfect for dispensers</p>
                     <div class="product-price">
                         <span class="price">Ksh 800</span>
+                    </div>
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <input type="number" class="qty-input" value="1" min="1" max="99">
+                        <button class="qty-btn plus">
+                            <i class="fas fa-plus"></i>
+                        </button>
                     </div>
                     <button class="add-to-cart-btn">
                         <i class="fas fa-cart-plus"></i>
@@ -236,8 +297,10 @@
                 </div>
                 <h3>Our Location</h3>
                 <p>Nairobi, Kenya</p>
-                <p>Mombasa Road, Next to SGR Terminal</p>
-                <a href="https://maps.google.com" target="_blank" class="contact-btn">
+                <p>Next to Junction Mall, Ngong Road</p>
+                <a href="https://www.google.com/maps/place/The+Junction+Mall/@-1.2983693,36.7617145,17z/data=!3m1!4b1!4m6!3m5!1s0x182f1a6bf7c81b3d:0x9f005c6c2a3c1cd0!8m2!3d-1.2983693!4d36.7642894!16s%2Fm%2F0bmjh6g?entry=ttu" 
+                   target="_blank" 
+                   class="contact-btn">
                     View on Map <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -283,25 +346,21 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#process">Purification</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Connect With Us</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                <div class="footer-logo">
+                    <span class="footer-logo-text">Bellam</span>
+                    <span class="footer-logo-water">Water</span>
                 </div>
+                <p class="footer-tagline">Pure Goodness in Every Drop</p>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2025 Bellam Water. All Rights Reserved.</p>
+            <div class="footer-bottom-content">
+                <p>&copy; 2024 Bellam Water. All Rights Reserved.</p>
+                <div class="developer-credit">
+                    <p>Crafted with <i class="fas fa-heart"></i> by <a href="https://github.com/yourusername" target="_blank">Amos</a></p>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -326,7 +385,7 @@
         });
     </script>
 
-    <!-- Add this before closing body tag -->
+    <!-- Cart Script -->
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         const cartToggle = document.getElementById('cart-toggle');
@@ -336,7 +395,98 @@
         const cartCount = document.getElementById('cart-count');
         const cartTotal = document.getElementById('cart-total');
         const whatsappCheckout = document.getElementById('whatsapp-checkout');
-        let cart = [];
+        
+        // Initialize cart from localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        function updateQuantity(itemId, newQuantity) {
+            const item = cart.find(item => item.id === parseInt(itemId));
+            if (item) {
+                if (newQuantity <= 0) {
+                    removeFromCart(itemId);
+                } else if (newQuantity <= 99) {
+                    item.quantity = newQuantity;
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartUI();
+                }
+            }
+        }
+
+        function removeFromCart(itemId) {
+            cart = cart.filter(item => item.id !== parseInt(itemId));
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const cartItems = document.getElementById('cart-items');
+            const cartCount = document.getElementById('cart-count');
+            const cartTotal = document.getElementById('cart-total');
+            
+            // Update cart count
+            cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+            
+            // Update cart items display
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<div class="empty-cart-message">Your cart is empty</div>';
+            } else {
+                cartItems.innerHTML = cart.map(item => `
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <img src="${item.image}" alt="${item.name}">
+                        </div>
+                        <div class="cart-item-info">
+                            <h4>${item.name}</h4>
+                            <div class="cart-item-price">
+                                <span>Ksh ${item.price * item.quantity}</span>
+                                <div class="quantity-controls">
+                                    <button onclick="window.cartFunctions.updateQuantity(${item.id}, ${item.quantity - 1})">-</button>
+                                    <span>${item.quantity}</span>
+                                    <button onclick="window.cartFunctions.updateQuantity(${item.id}, ${item.quantity + 1})">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="remove-item" onclick="window.cartFunctions.removeFromCart(${item.id})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `).join('');
+            }
+
+            // Calculate total
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            cartTotal.textContent = `Ksh ${total}`;
+
+            // Update WhatsApp message
+            updateWhatsAppMessage();
+        }
+
+        function updateWhatsAppMessage() {
+            const customerName = document.getElementById('customer-name').value.trim();
+            const customerPhone = document.getElementById('customer-phone').value.trim();
+            const deliveryLocation = document.getElementById('delivery-location').value;
+            const deliveryNotes = document.getElementById('delivery-notes').value.trim();
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            const message = encodeURIComponent(
+                `*New Order Details*\n\n` +
+                `*Customer Information:*\n` +
+                `Name: ${customerName}\n` +
+                `Phone: ${customerPhone}\n` +
+                `Location: ${deliveryLocation}\n\n` +
+                `*Order Items:*\n${
+                    cart.map(item => {
+                        const isLargeBottle = item.name.includes('10 Liter') || item.name.includes('18.9 Liter');
+                        const unit = isLargeBottle ? 'bottles' : 'bales';
+                        return `• ${item.name} (${item.quantity} ${unit})\n   Ksh ${item.price * item.quantity}`;
+                    }).join('\n')
+                }\n\n` +
+                `*Total: Ksh ${total}*\n\n` +
+                `*Delivery Notes:*\n${deliveryNotes || '-'}`
+            );
+
+            document.getElementById('whatsapp-checkout').href = `https://wa.me/+254740780838?text=${message}`;
+        }
 
         // Toggle cart dropdown
         cartToggle.addEventListener('click', (e) => {
@@ -348,73 +498,122 @@
             cartDropdown.classList.remove('active');
         });
 
-        // Add to cart functionality
-        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                const card = this.closest('.product-card');
-                const product = {
-                    id: Date.now(), // Unique ID for each item
-                    name: card.querySelector('h3').textContent,
-                    price: parseInt(card.querySelector('.price').textContent.replace('Ksh ', '')),
-                    image: card.querySelector('.product-image img').src
-                };
-                
-                addToCart(product);
-            });
+        // Prevent cart from closing when clicking inside it
+        cartDropdown.addEventListener('click', (e) => {
+            e.stopPropagation();
         });
 
-        function addToCart(product) {
-            cart.push(product);
-            updateCartUI();
-            cartDropdown.classList.add('active');
-        }
-
-        function removeFromCart(productId) {
-            cart = cart.filter(item => item.id !== productId);
-            updateCartUI();
-        }
-
-        function updateCartUI() {
-            // Update cart count
-            cartCount.textContent = cart.length;
-
-            // Update cart items
-            cartItems.innerHTML = cart.map(item => `
-                <div class="cart-item">
-                    <div class="cart-item-image">
-                        <img src="${item.image}" alt="${item.name}">
-                    </div>
-                    <div class="cart-item-details">
-                        <div class="cart-item-title">${item.name}</div>
-                        <div class="cart-item-price">Ksh ${item.price}</div>
-                    </div>
-                    <button class="remove-item" onclick="removeFromCart(${item.id})">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                </div>
-            `).join('');
-
-            // Update total
-            const total = cart.reduce((sum, item) => sum + item.price, 0);
-            cartTotal.textContent = `Ksh ${total}`;
-
-            // Update WhatsApp checkout link
-            const message = encodeURIComponent(`Hello! I would like to order:\n\n${
-                cart.map(item => `- ${item.name}: Ksh ${item.price}`).join('\n')
-            }\n\nTotal: Ksh ${total}`);
-            
-            whatsappCheckout.href = `https://wa.me/+254740780838?text=${message}`;
-        }
-
-        // Make removeFromCart function global for the onclick handler
-        window.removeFromCart = removeFromCart;
-
-        // Close cart when clicking outside
+        // Close cart only when clicking outside cart and cart toggle
         document.addEventListener('click', (e) => {
             if (!cartDropdown.contains(e.target) && !cartToggle.contains(e.target)) {
                 cartDropdown.classList.remove('active');
             }
         });
+
+        // Quantity selector functionality
+        document.querySelectorAll('.quantity-selector').forEach(selector => {
+            const minusBtn = selector.querySelector('.minus');
+            const plusBtn = selector.querySelector('.plus');
+            const input = selector.querySelector('.qty-input');
+
+            minusBtn.addEventListener('click', () => {
+                const currentValue = parseInt(input.value);
+                if (currentValue > 1) {
+                    input.value = currentValue - 1;
+                }
+            });
+
+            plusBtn.addEventListener('click', () => {
+                const currentValue = parseInt(input.value);
+                if (currentValue < 99) {
+                    input.value = currentValue + 1;
+                }
+            });
+
+            input.addEventListener('change', () => {
+                if (input.value < 1) input.value = 1;
+                if (input.value > 99) input.value = 99;
+            });
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const card = this.closest('.product-card');
+                const quantity = parseInt(card.querySelector('.qty-input').value);
+                const product = {
+                    id: Date.now(),
+                    name: card.querySelector('h3').textContent,
+                    price: parseInt(card.querySelector('.price').textContent.replace('Ksh ', '')),
+                    image: card.querySelector('.product-image img').src,
+                    quantity: quantity,
+                    description: card.querySelector('.product-description').textContent
+                };
+                
+                addToCart(product);
+                
+                // Show feedback
+                const originalText = this.innerHTML;
+                this.innerHTML = '<i class="fas fa-check"></i> Added!';
+                this.style.backgroundColor = '#4CAF50';
+                
+                setTimeout(() => {
+                    this.innerHTML = originalText;
+                    this.style.backgroundColor = '';
+                }, 2000);
+            });
+        });
+
+        function addToCart(product) {
+            const existingItem = cart.find(item => 
+                item.name === product.name && 
+                item.price === product.price
+            );
+
+            if (existingItem) {
+                existingItem.quantity += product.quantity;
+                existingItem.quantity = Math.min(existingItem.quantity, 99);
+            } else {
+                cart.push(product);
+            }
+
+            updateCartUI();
+            cartDropdown.classList.add('active');
+        }
+
+        // Add input validation styling
+        const inputs = document.querySelectorAll('.checkout-input');
+        inputs.forEach(input => {
+            if (input.id !== 'delivery-location' && input.id !== 'delivery-notes') {
+                input.addEventListener('input', function() {
+                    if (this.value.trim() === '') {
+                        this.style.borderColor = '#ff6b6b';
+                    } else {
+                        this.style.borderColor = '#76abae';
+                    }
+                });
+            }
+        });
+
+        // Phone number live validation
+        const phoneInput = document.getElementById('customer-phone');
+        phoneInput.addEventListener('input', function() {
+            const phoneRegex = /^(?:\+254|0)[17]\d{8}$/;
+            if (phoneRegex.test(this.value.trim())) {
+                this.style.borderColor = '#76abae';
+            } else {
+                this.style.borderColor = '#ff6b6b';
+            }
+        });
+
+        // Make functions available globally
+        window.cartFunctions = {
+            updateQuantity,
+            removeFromCart
+        };
+
+        // Initial UI update
+        updateCartUI();
     });
     </script>
 </body>
