@@ -3,164 +3,419 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bellam Water | Pure Goodness in Every Drop">
+    <meta name="keywords" content="Bellam Water, pure water, bottled water, hydration">
+    <meta name="author" content="Bellam Water Company">
+    <meta property="og:title" content="Bellam Water - Pure Goodness">
+    <meta property="og:description" content="Experience the purity and refreshment of Bellam Water, crafted to perfection.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://bellamwater.com">
     <title>Bellam Water - Pure Goodness</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="bellam.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<header>
-    <h1 class="logo">Bellam Water</h1>
-    <p>Pure Goodness</p>
-</header>
-
-<section class="hero">
-    <div class="overlay">
-        <div class="hero-text animate__animated animate__fadeInDown">
-            <h1>Welcome to Bellam Water</h1>
-            <p>Pure Goodness in Every Drop</p>
-            <a href="#products" class="btn btn-primary">Explore Products</a>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-text-container">
+                    <span class="logo-text">Bellam</span>
+                    <span class="logo-text-water">Water</span>
+                </div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#process">Purification</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="cart-wrapper">
+                    <a href="#" class="cart-icon" id="cart-toggle">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                    <!-- Cart Dropdown -->
+                    <div class="cart-dropdown" id="cart-dropdown">
+                        <div class="cart-header">
+                            <h3>Shopping Cart</h3>
+                            <button class="close-cart" id="close-cart">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="cart-items" id="cart-items">
+                            <!-- Cart items will be dynamically added here -->
+                        </div>
+                        <div class="cart-footer">
+                            <div class="cart-total">
+                                <span>Total:</span>
+                                <span id="cart-total">Ksh 0</span>
+                            </div>
+                            <a href="#" class="checkout-btn" id="whatsapp-checkout">
+                                <i class="fab fa-whatsapp"></i>
+                                Checkout via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Pure Hydration for a Better Life</h1>
+            <p class="hero-subtitle">Experience the difference with our premium purified water</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+                <a href="#process" class="btn btn-secondary">Learn More</a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="container py-5">
-    <h3 class="text-center">Our Mission</h3>
-    <p class="text-center">At Bellam Water, our mission is to provide high-quality, pure bottled water that refreshes and nourishes while promoting health and wellness for all. We are committed to excellence in every drop.</p>
-</section>
-
-<section id="products" class="container py-5">
-    <h3 class="text-center">Our Products</h3>
-    <div class="row g-4">
-        <div class="col-md-3">
+    <section id="products" class="product-section">
+        <div class="section-header">
+            <h2>Our Premium Products</h2>
+            <p class="section-subtitle">Choose the perfect size for your hydration needs</p>
+        </div>
+        <div class="product-grid">
+            <!-- Product Card 1 -->
             <div class="product-card">
-                <img src="500ml.jpg" alt="500ml bottle">
-                <div class="info">
-                    <p>500ml Bottle</p>
-                    <p>Price: Ksh 50</p>
+                <div class="product-badge">Best Seller</div>
+                <div class="product-image">
+                    <img src="500ml.jpg" alt="Bellam Water 500ml">
+                    <div class="product-overlay">
+                        <div class="overlay-content">
+                            <button class="quick-view-btn">
+                                <i class="fas fa-eye"></i>
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="hover-buttons">
-                    <button class="btn" data-bs-toggle="modal" data-bs-target="#productModal1">View</button>
-                    <button class="btn">Like</button>
+                <div class="product-info">
+                    <h3>Premium 500ml</h3>
+                    <p class="product-description">Perfect for on-the-go hydration</p>
+                    <div class="product-price">
+                        <span class="price">Ksh 50</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3">
+
+            <!-- Product Card 2 -->
             <div class="product-card">
-                <img src="1litre.jpg" alt="1 litre bottle">
-                <div class="info">
-                    <p>1 Litre Bottle</p>
-                    <p>Price: Ksh 100</p>
+                <div class="product-badge popular">Popular</div>
+                <div class="product-image">
+                    <img src="1litre.jpg" alt="Bellam Water 1L">
+                    <div class="product-overlay">
+                        <div class="overlay-content">
+                            <button class="quick-view-btn">
+                                <i class="fas fa-eye"></i>
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="hover-buttons">
-                    <button class="btn" data-bs-toggle="modal" data-bs-target="#productModal2">View</button>
-                    <button class="btn">Like</button>
+                <div class="product-info">
+                    <h3>Premium 1 Liter</h3>
+                    <p class="product-description">Ideal for daily consumption</p>
+                    <div class="product-price">
+                        <span class="price">Ksh 80</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3">
+
+            <!-- Product Card 3 -->
             <div class="product-card">
-                <img src="10litre.jpg" alt="10 litre bottle">
-                <div class="info">
-                    <p>10 Litre Bottle</p>
-                    <p>Price: Ksh 300</p>
+                <div class="product-badge family">Family Size</div>
+                <div class="product-image">
+                    <img src="10litre.jpg" alt="Bellam Water 10L">
+                    <div class="product-overlay">
+                        <div class="overlay-content">
+                            <button class="quick-view-btn">
+                                <i class="fas fa-eye"></i>
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="hover-buttons">
-                    <button class="btn" data-bs-toggle="modal" data-bs-target="#productModal3">View</button>
-                    <button class="btn">Like</button>
+                <div class="product-info">
+                    <h3>Premium 10 Liter</h3>
+                    <p class="product-description">Perfect for home and office</p>
+                    <div class="product-price">
+                        <span class="price">Ksh 250</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3">
+
+            <!-- Product Card 4 -->
             <div class="product-card">
-                <img src="20litre.jpg" alt="20 litre bottle">
-                <div class="info">
-                    <p>20 Litre Bottle</p>
-                    <p>Price: Ksh 1000</p>
+                <div class="product-badge bulk">Bulk Order</div>
+                <div class="product-image">
+                    <img src="20litre.jpg" alt="Bellam Water 18.9L">
+                    <div class="product-overlay">
+                        <div class="overlay-content">
+                            <button class="quick-view-btn">
+                                <i class="fas fa-eye"></i>
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="hover-buttons">
-                    <button class="btn" data-bs-toggle="modal" data-bs-target="#productModal4">View</button>
-                    <button class="btn">Like</button>
+                <div class="product-info">
+                    <h3>Premium 18.9 Liter</h3>
+                    <p class="product-description">Industrial and office solution</p>
+                    <div class="product-price">
+                        <span class="price">Ksh 800</span>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-cart-plus"></i>
+                        Add to Cart
+                    </button>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="container py-5">
-    <h3 class="text-center">Purification Process</h3>
-    <p class="text-center">Our modern purification process includes filtration, reverse osmosis, UV treatment, and ozonation, ensuring every drop meets the highest standards of quality and safety.</p>
-</section>
-
-<section class="container py-5">
-    <h3 class="text-center">Contact Us</h3>
-    <p class="text-center"><a href="https://wa.me/+254740780838" style="color: #25d366; text-decoration: none;">
-  Call or Contact Us on WhatsApp
-</a>
- | <a href="mailto:sales@bellamwater.com" style="color: #007bff; text-decoration: none;">
-  Contact Us via Email
-</a>
-
-</section>
-
-<a href="https://wa.me/+254740780838" class="btn-whatsapp">Chat with us on WhatsApp</a>
-
-<!-- Product Modals -->
-<div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModal1Label" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <img src="500ml.jpg" alt="500ml Bottle">
-            <div class="p-3">
-                <h5 class="modal-title">500ml Bottle</h5>
-                <p>Price: Ksh 50</p>
-                <p>A compact, portable bottle for your on-the-go hydration needs.</p>
-                <button class="btn btn-primary">Add to Cart</button>
+    <section id="process" class="process-section">
+        <div class="section-header">
+            <h2>Our Advanced Purification Process</h2>
+            <p class="section-subtitle">Ensuring the highest quality in every drop</p>
+        </div>
+        <div class="process-steps">
+            <div class="process-step">
+                <i class="fas fa-filter"></i>
+                <h3>Filtration</h3>
+                <p>Multi-stage filtration system</p>
+            </div>
+            <div class="process-step">
+                <i class="fas fa-water"></i>
+                <h3>Reverse Osmosis</h3>
+                <p>Advanced purification technology</p>
+            </div>
+            <div class="process-step">
+                <i class="fas fa-radiation"></i>
+                <h3>UV Treatment</h3>
+                <p>Elimination of harmful bacteria</p>
+            </div>
+            <div class="process-step">
+                <i class="fas fa-flask"></i>
+                <h3>Ozonation</h3>
+                <p>Final purification stage</p>
             </div>
         </div>
-    </div>
-</div>
-<div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModal2Label" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <img src="1litre.jpg" alt="1 Litre Bottle">
-            <div class="p-3">
-                <h5 class="modal-title">1 Litre Bottle</h5>
-                <p>Price: Ksh 100</p>
-                <p>A larger bottle for those who need more hydration throughout the day.</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModal3Label" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <img src="10litre.jpg" alt="10 Litre Bottle">
-            <div class="p-3">
-                <h5 class="modal-title">10 Litre Bottle</h5>
-                <p>Price: Ksh 300</p>
-                <p>Perfect for family use or small gatherings.</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="productModal4" tabindex="-1" aria-labelledby="productModal4Label" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <img src="20litre.jpg" alt="20 Litre Bottle">
-            <div class="p-3">
-                <h5 class="modal-title">20 Litre Bottle</h5>
-                <p>Price: Ksh 1000</p>
-                <p>Ideal for offices, homes, or events.</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-        </div>
-    </div>
-</div>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2>Get in Touch</h2>
+            <p class="section-subtitle">We're here to help you stay hydrated</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Our Location</h3>
+                <p>Nairobi, Kenya</p>
+                <p>Mombasa Road, Next to SGR Terminal</p>
+                <a href="https://maps.google.com" target="_blank" class="contact-btn">
+                    View on Map <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>WhatsApp</h3>
+                <p>Chat with us directly</p>
+                <p>Available 24/7</p>
+                <a href="https://wa.me/+254740780838" class="contact-btn whatsapp-btn">
+                    Message Us <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Call Us</h3>
+                <p>Customer Support</p>
+                <p>+254 740 780 838</p>
+                <a href="tel:+254740780838" class="contact-btn">
+                    Call Now <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email Us</h3>
+                <p>For inquiries and support</p>
+                <p>sales@bellamwater.com</p>
+                <a href="mailto:sales@bellamwater.com" class="contact-btn">
+                    Send Email <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#process">Purification</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Bellam Water. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+        });
+    </script>
+
+    <!-- Add this before closing body tag -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const cartToggle = document.getElementById('cart-toggle');
+        const cartDropdown = document.getElementById('cart-dropdown');
+        const closeCart = document.getElementById('close-cart');
+        const cartItems = document.getElementById('cart-items');
+        const cartCount = document.getElementById('cart-count');
+        const cartTotal = document.getElementById('cart-total');
+        const whatsappCheckout = document.getElementById('whatsapp-checkout');
+        let cart = [];
+
+        // Toggle cart dropdown
+        cartToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            cartDropdown.classList.toggle('active');
+        });
+
+        closeCart.addEventListener('click', () => {
+            cartDropdown.classList.remove('active');
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const card = this.closest('.product-card');
+                const product = {
+                    id: Date.now(), // Unique ID for each item
+                    name: card.querySelector('h3').textContent,
+                    price: parseInt(card.querySelector('.price').textContent.replace('Ksh ', '')),
+                    image: card.querySelector('.product-image img').src
+                };
+                
+                addToCart(product);
+            });
+        });
+
+        function addToCart(product) {
+            cart.push(product);
+            updateCartUI();
+            cartDropdown.classList.add('active');
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            // Update cart count
+            cartCount.textContent = cart.length;
+
+            // Update cart items
+            cartItems.innerHTML = cart.map(item => `
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="${item.image}" alt="${item.name}">
+                    </div>
+                    <div class="cart-item-details">
+                        <div class="cart-item-title">${item.name}</div>
+                        <div class="cart-item-price">Ksh ${item.price}</div>
+                    </div>
+                    <button class="remove-item" onclick="removeFromCart(${item.id})">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            `).join('');
+
+            // Update total
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            cartTotal.textContent = `Ksh ${total}`;
+
+            // Update WhatsApp checkout link
+            const message = encodeURIComponent(`Hello! I would like to order:\n\n${
+                cart.map(item => `- ${item.name}: Ksh ${item.price}`).join('\n')
+            }\n\nTotal: Ksh ${total}`);
+            
+            whatsappCheckout.href = `https://wa.me/+254740780838?text=${message}`;
+        }
+
+        // Make removeFromCart function global for the onclick handler
+        window.removeFromCart = removeFromCart;
+
+        // Close cart when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!cartDropdown.contains(e.target) && !cartToggle.contains(e.target)) {
+                cartDropdown.classList.remove('active');
+            }
+        });
+    });
+    </script>
 </body>
 </html>
